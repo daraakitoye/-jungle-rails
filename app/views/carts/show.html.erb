@@ -1,9 +1,14 @@
 <section class="cart-show">
 
   <header class="page-header">
+   
     <h1>My Cart</h1>
   </header>
-
+ <% if enhanced_cart.length == 0 %>
+    <div class="alert alert-danger" role="alert">
+      <h2>Your cart is empty.</h2>
+    </div>  
+<% else %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -48,5 +53,6 @@
       <% end %>
     </div>
   </div>
-
+<% end %>
 </section>
+
