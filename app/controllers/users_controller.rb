@@ -10,6 +10,7 @@ def create
     redirect_to '/'
     else
       redirect_to '/signup'
+    end
   end
 
   private
@@ -17,6 +18,5 @@ def create
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 
-end
-
+  
 end
